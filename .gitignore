@@ -7,8 +7,8 @@
 
 # ignore software
 /software
-!software/*.placeholder
+!/software/*.placeholder
 
 # ignore venv
 /venv
-!venv/*.placeholder
+!/venv/*.placeholder
