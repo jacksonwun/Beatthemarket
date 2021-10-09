@@ -1,0 +1,64 @@
+version: '3'
+
+# registry:
+#     environment: 
+#         TZ:"Asia/Hong_Kong"
+
+services:
+    db:
+        image: timescale/timescaledb:latest-pg12
+        volumes:
+            - ./data/db:/var/lib/postgresql/data
+        environment:
+            - POSTGRES_DB=postgres
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+    web:
+        build: .
+        command: python manage.py runserver 0.0.0.0:8000
+        volumes:
+            - .:/code
+            - Software:/var
+            # - /etc/timezone:/etc/timezone:ro
+            # - /etc/localtime:/etc/localtime:ro
+        # environment: 
+        #     - TZ:"Asia/Hong_Kong"
+        ports:
+            - "8000:8000"
+        depends_on:
+            - db
+        # command: ["/var/FutuOpenD_5.4.1608_Ubuntu16.04/FutuOpenD_5.4.1608_Ubuntu16.04/FutuOpenD"]
+        # command: ['sudo ', 'python -m pip install --upgrade pip']
+        # command: ['pip install', 'rest_framework']
+    frontend:
+        build: ./frontend
+        # command: ["npm", "install", "socket.io-client"]
+        command: ["npm", "start"]
+        volumes:
+            - ./frontend:/var/app/frontend
+            - ./frontend/node_modules:/var/app/frontend/node_modules
+        environment:
+            CHOKIDAR_USEPOLLING: "true"
+        ports:
+            - "3000:3000"
+        tty: true
+        stdin_open: true
+    redis:
+        image: redis
+        restart: unless-stopped
+        volumes: 
+            - ./tmp:/data 
+        expose:
+            - "6379"
+    # futu:
+    #     command: ["/var/FutuOpenD_5.4.1608_Ubuntu16.04/FutuOpenD_5.4.1608_Ubuntu16.04/FutuOpenD"]
+    #     depends_on: 
+    #         - web
+
+volumes:
+    Software:
+        driver: local
+        driver_opts:
+            o: bind
+            type: none
+            device: C:\Users\Jason\Desktop\Warrant\Warrant\software

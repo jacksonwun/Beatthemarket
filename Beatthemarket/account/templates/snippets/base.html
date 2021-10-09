@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+    <link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+    <title>Beat The Market!!</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+        
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
+        body {
+            overflow-x: hidden;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+        }
+
+      /* Toggle Styles */
+        #viewport {
+            padding-left: 250px;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+        #content {
+            width: 100%;
+            position: relative;
+            margin-right: 0;
+        }
+
+      /* Sidebar Styles */
+        #sidebar {
+            z-index: 1000;
+            position: fixed;
+            left: 250px;
+            width: 250px;
+            height: 100%;
+            margin-left: -250px;
+            overflow-y: auto;
+            background: #37474F;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        #sidebar header {
+            background-color: #263238;
+            font-size: 20px;
+            line-height: 52px;
+            text-align: center;
+        }
+        #sidebar header a {
+            color: #fff;
+            display: block;
+            text-decoration: none;
+        }
+        #sidebar header a:hover {
+            color: #fff;
+        }
+        #sidebar .nav{
+        }
+        #sidebar .nav a{
+            background: none;
+            border-bottom: 1px solid #455A64;
+            color: #CFD8DC;
+            font-size: 14px;
+            padding: 16px 24px;
+        }
+        #sidebar .nav a:hover{
+            background: none;
+            color: #ECEFF1;
+        }
+        #sidebar .nav a i{
+            margin-right: 16px;
+        }
+    </style>
+
+    <script>
+        window.console = window.console || function(t) {};
+    </script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
+    body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    }
+
+    /* Toggle Styles */
+
+    #viewport {
+    padding-left: 250px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    }
+
+    #content {
+    width: 100%;
+    position: relative;
+    margin-right: 0;
+    }
+
+    /* Sidebar Styles */
+
+    #sidebar {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #37474F;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    }
+
+    #sidebar header {
+    background-color: #263238;
+    font-size: 20px;
+    line-height: 52px;
+    text-align: center;
+    }
+
+    #sidebar header a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    }
+
+    #sidebar header a:hover {
+    color: #fff;
+    }
+
+    #sidebar .nav{
+    
+    }
+
+    #sidebar .nav a{
+    background: none;
+    border-bottom: 1px solid #455A64;
+    color: #CFD8DC;
+    font-size: 14px;
+    padding: 16px 24px;
+    }
+
+    #sidebar .nav a:hover{
+    background: none;
+    color: #ECEFF1;
+    }
+
+    #sidebar .nav a i{
+    margin-right: 16px;
+    }
+</style>
+
+<body>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css'>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css'>
+
+    <div id="viewport">
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <header>
+                <a href="#">Beat The Market</a>
+            </header>
+            <ul class="nav">
+                <li><a href="{% url 'dashboard' %}"><i class="zmdi zmdi-view-dashboard"></i> Dashboard</a></li>
+                <li><a href="{% url 'realTimeInfo' %}"><i class="zmdi zmdi-widgets"></i> Real Time Info</a></li>
+                <li><a href="{% url 'warrant' %}"><i class="zmdi zmdi-calendar"></i> Warrant</a></li>
+                <li><a href="{% url 'crypto' %}"><i class="zmdi zmdi-info-outline"></i> Crypto</a></li>
+                <li><a href="{% url 'sentiment' %}"><i class="zmdi zmdi-settings"></i> Sentiment</a></li>
+                <li><a href="{% url 'algoTrade' %}"><i class="zmdi zmdi-comment-more"></i> Algo Trade</a></li>
+                <li><a href="{% url 'settings' %}"><i class="zmdi zmdi-link"></i> Settings</a></li>                
+            </ul>
+        </div>
+
+        <div id="content">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                    <a href="#"><i class="zmdi zmdi-notifications text-danger"></i>
+                    </a>
+                    </li>
+                    <li><a href="#">Test User</a></li>
+                </ul>
+                </div>
+            </nav>
+        </div>
+        {% block content %} {% endblock %}
+
+    </div>
+
+
+
+
+</body>
+</html>

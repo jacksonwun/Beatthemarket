@@ -1,0 +1,11 @@
+# guarantee folder created
+!.placeholder
+
+# ignore database
+/Beatthemarket/data
+
+# ignore software
+/software
+
+# ignore venv
+/venv
