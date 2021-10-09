@@ -3,9 +3,12 @@
 
 # ignore database
 /Beatthemarket/data
+!/Beatthemarket/data/*.placeholder
 
 # ignore software
 /software
+!software/*.placeholder
 
 # ignore venv
 /venv
+!venv/*.placeholder
