@@ -16,3 +16,7 @@
 # ignore Beatthemarket/frontend/node_modules
 /Beatthemarket/frontend/node_modules
 !/Beatthemarket/frontend/node_modules/*.placeholder
+
+# ignore frontend
+/frontend/node_modules
+# !/frontend/*.placeholder
