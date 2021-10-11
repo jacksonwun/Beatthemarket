@@ -10,7 +10,7 @@
 !/Beatthemarket/data/.placeholder
 
 # ignore software
-/software
+/software/*
 !/software/.placeholder
 
 # ignore venv
