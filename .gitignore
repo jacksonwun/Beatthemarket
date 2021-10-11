@@ -3,11 +3,11 @@
 
 # ignore database
 /Beatthemarket/data
-!/Beatthemarket/data/*.placeholder
+!/Beatthemarket/data/.placeholder
 
 # ignore software
 /software
-!/software/*.placeholder
+!/software/.placeholder
 
 # ignore venv
 /venv
@@ -15,8 +15,7 @@
 
 # ignore Beatthemarket/frontend/node_modules
 /Beatthemarket/frontend/node_modules
-!/Beatthemarket/frontend/node_modules/*.placeholder
+!/Beatthemarket/frontend/node_modules/.placeholder
 
 # ignore frontend
 /frontend/node_modules
-# !/frontend/*.placeholder
