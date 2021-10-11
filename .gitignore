@@ -1,6 +1,3 @@
-# guarantee folder created
-!.gitignore
-
 # ignore database
 /Beatthemarket/data
 !/Beatthemarket/data/.placeholder
@@ -19,3 +16,6 @@
 
 # ignore frontend
 /frontend/node_modules
+
+# guarantee folder created
+!.gitignore
