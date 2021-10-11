@@ -12,3 +12,7 @@
 # ignore venv
 /venv
 !/venv/*.placeholder
+
+# ignore Beatthemarket/frontend/node_modules
+/Beatthemarket/frontend/node_modules
+!/Beatthemarket/frontend/node_modules/*.placeholder
