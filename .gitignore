@@ -11,7 +11,7 @@
 
 # ignore software
 /software/*
-!/software/.placeholder
+!/software/.gitignore
 
 # ignore venv
 /venv
