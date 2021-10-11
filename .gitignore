@@ -1,4 +1,6 @@
 # guarantee folder created
+*
+*/
 !.gitignore
 
 # ignore database
