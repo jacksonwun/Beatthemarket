@@ -1,5 +1,5 @@
 # guarantee folder created
-!.placeholder
+!.gitignore
 
 # ignore database
 /Beatthemarket/data
