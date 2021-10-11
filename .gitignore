@@ -2,7 +2,7 @@
 *
 */
 !.gitignore
-!*/.gitignore
+!/*/.gitignore
 
 # ignore database
 /Beatthemarket/data
