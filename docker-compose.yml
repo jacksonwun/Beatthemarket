@@ -1,42 +1,30 @@
 version: '3'
 
-# registry:
-#     environment: 
-#         TZ:"Asia/Hong_Kong"
-
 services:
     db:
         image: timescale/timescaledb:latest-pg12
         volumes:
-            - .Beatthemarket/data/db:/var/lib/postgresql/data
+            - /Beatthemarket/data/db:/var/lib/postgresql/data
         environment:
             - POSTGRES_DB=postgres
             - POSTGRES_USER=postgres
             - POSTGRES_PASSWORD=postgres
     web:
-        build: .
+        build: ./Beatthemarket
         command: python manage.py runserver 0.0.0.0:8000
         volumes:
             - ./Beatthemarket:/code
-            - Software:/var
-            # - /etc/timezone:/etc/timezone:ro
-            # - /etc/localtime:/etc/localtime:ro
-        # environment: 
-        #     - TZ:"Asia/Hong_Kong"
+            - ./software:/var
         ports:
             - "8000:8000"
         depends_on:
             - db
-        # command: ["/var/FutuOpenD_5.4.1608_Ubuntu16.04/FutuOpenD_5.4.1608_Ubuntu16.04/FutuOpenD"]
-        # command: ['sudo ', 'python -m pip install --upgrade pip']
-        # command: ['pip install', 'rest_framework']
     frontend:
-        build: ./frontend
-        # command: ["npm", "install", "socket.io-client"]
+        build: ./btm_frontend
         command: ["npm", "start"]
         volumes:
-            - ./frontend:/var/app/frontend
-            - ./frontend/node_modules:/var/app/frontend/node_modules
+            - ./btm_frontend:/var/app/btm_frontend
+            - ./btm_frontend/node_modules:/var/app/btm_frontend/node_modules
         environment:
             CHOKIDAR_USEPOLLING: "true"
         ports:
@@ -50,10 +38,6 @@ services:
             - ./tmp:/data 
         expose:
             - "6379"
-    # futu:
-    #     command: ["/var/FutuOpenD_5.4.1608_Ubuntu16.04/FutuOpenD_5.4.1608_Ubuntu16.04/FutuOpenD"]
-    #     depends_on: 
-    #         - web
 
 volumes:
     Software:
@@ -61,4 +45,4 @@ volumes:
         driver_opts:
             o: bind
             type: none
-            device: C:\Users\Jason\Desktop\Warrant\Warrant\software
+            device: C:\Users\Jason.DESKTOP-FORTAGF\Documents\GitHub\Warrant\software

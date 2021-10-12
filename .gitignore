@@ -5,7 +5,7 @@ Beatthemarket/data/db/*
 software/*
 
 # ignore frontend
-frontend/node_modules/*
+btm_frontend/node_modules/*
 
 #? python
 # Byte-compiled / optimized / DLL files
