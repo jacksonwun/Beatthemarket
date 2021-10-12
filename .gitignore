@@ -1,3 +1,6 @@
+# ignore tmp folder
+tmp/*
+
 # ignore database
 Beatthemarket/data/db/*
 
