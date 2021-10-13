@@ -328,7 +328,6 @@ class WarrantConsumer(AsyncJsonWebsocketConsumer):
                     asyncio_tasks.append( asyncio.create_task( self.Grab_history_stock_data(stock_code=str(stock_code), num=400) ) )
                 asyncio.sleep(10000)
 
-
     async def actual_warrant(self, warrant_code):
         current_time                             = time_control()
         info = {}
