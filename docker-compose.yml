@@ -22,6 +22,7 @@ services:
     frontend:
         build: ./btm_frontend
         command: ["npm", "start"]
+        # command: ["npm", "run build"]
         volumes:
             - ./btm_frontend:/var/app/btm_frontend
             - ./btm_frontend/node_modules:/var/app/btm_frontend/node_modules
