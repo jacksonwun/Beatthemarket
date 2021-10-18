@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // Import base styles
 @import '~flatpickr/dist/flatpickr.min.css';
 
@@ -20,7 +22,7 @@ $daysWidth: $daySize*7;
 .flatpickr-calendar {
     border: inherit;
     @apply rounded shadow-lg border border-gray-200 left-1/2;
-    margin-left: - ($daysWidth + $calendarPadding*2)/2;
+    margin-left: - math.div(-$daysWidth + $calendarPadding * 2, 2);
     padding: $calendarPadding;
     width: $daysWidth + $calendarPadding*2;
 }

@@ -1,0 +1,1 @@
+declare module 'cruip-js-toolkit';

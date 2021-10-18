@@ -12,7 +12,7 @@ module.exports = {
       },
       colors: {
         gray: colors.blueGray,
-        'light-blue': colors.lightBlue,
+        'light-blue': colors.sky,
         red: colors.rose,
       },
       outline: {
