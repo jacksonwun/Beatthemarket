@@ -456,14 +456,6 @@ def plot_table(fig):
     plt_div = plot(fig, output_type='div', include_plotlyjs=False)
     return plt_div
 
-### dash ###
-def dash(request, **kwargs):
-    return HttpResponse(dispatcher(request))
-
-@csrf_exempt
-def dash_ajax(request):
-    return HttpResponse(dispatcher(request), content_type='application/json')
-
 def traded_positions(rt_ticker):
     x = rt_ticker
     df = rt_ticker.sort_values(['time', 'volume'], ascending=[True, True])

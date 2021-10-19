@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     'channels',
     'django_tables2',
     'rest_framework',
-    'django_plotly_dash.apps.DjangoPlotlyDashConfig',
+    # 'django_plotly_dash.apps.DjangoPlotlyDashConfig',
 
     # 'warrant',
     'warrant.apps.WarrantConfig'
@@ -139,5 +139,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'frontend/build/static'),
 ]
 
-# Django_DASH
-X_FRAME_OPTIONS = 'SAMEORIGIN'
+# # Django_DASH
+# X_FRAME_OPTIONS = 'SAMEORIGIN'
