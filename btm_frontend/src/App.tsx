@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import {
   Switch,
   Route,
   useLocation
 } from 'react-router-dom';
+import Login from './components/Login'
 
 import './css/style.scss';
 // import { focusHandling } from 'cruip-js-toolkit';
@@ -31,11 +33,16 @@ function App() {
 
   return (
     <>
-      <Switch>
-        <Route exact path="/">
-          <Dashboard />
-        </Route>
-      </Switch>
+      <BrowserRouter>
+          <Switch>
+            <Route exact path="/">
+              <Dashboard />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+          </Switch>    
+      </BrowserRouter>
     </>
   );
 }
