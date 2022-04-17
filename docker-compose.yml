@@ -46,4 +46,4 @@ volumes:
         driver_opts:
             o: bind
             type: none
-            device: C:\Users\Jason.DESKTOP-FORTAGF\Documents\GitHub\Warrant\software
+            device: C:~\software
