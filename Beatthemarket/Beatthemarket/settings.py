@@ -9,15 +9,15 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-# from decouple import config
+from decouple import config
 from pathlib import Path
-import os
+import os, json
 
+DEBUG = config('DEBUG', default=False, cast=bool)
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = '3v-7s+sy-wzj4ibgz9a&=#kbud!t=c&z+8a%8j*s)r#tr^9jjz'
-ASGI_APPLICATION = 'Beatthemarket.routing.application'
-DEBUG = True
-ALLOWED_HOSTS = ['*']
+SECRET_KEY = config("SECRET_KEY")
+ASGI_APPLICATION = f'{config("PROJECT_NAME")}.routing.application'
+ALLOWED_HOSTS = json.loads(config("ALLOWED_HOSTS"))
 
 # Application definition
 INSTALLED_APPS = [
